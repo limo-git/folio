@@ -80,7 +80,6 @@
   import { onBeforeMount, ref } from 'vue';
   import { MyName, Star } from '../design';
   import { Button } from '@/components/common';
-  import { profile } from '@/assets/images';
   import { getAvailableForWorkDate, textSplitterIntoChar } from '@/functions';
   import { dataCalConfig, dataCalLink, dataCalNamespace } from '@/data';
 
