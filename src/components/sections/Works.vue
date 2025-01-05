@@ -72,7 +72,7 @@
                 <!-- autoplay="false" -->
 
                 <video
-                  :src="work.videoSrc"
+                  data-src="work.videoSrc"
                   loop
                   muted
                   @error="handleVideoError"
@@ -234,13 +234,15 @@
   };
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      const video = entry.target as HTMLVideoElement;
-      if (entry.isIntersecting) {
-        video.play();
-      }
-    });
-  };
+  entries.forEach((entry) => {
+    const video = entry.target as HTMLVideoElement;
+    if (entry.isIntersecting) {
+      video.src = video.getAttribute('data-src') || ''; // Set the src from data-src
+      video.play();
+    }
+  });
+};
+
 
   onBeforeMount(() => {
     selectedWorks.value = textSplitterIntoChar('Selected Works / ', true);
