@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+.\@container {
+  container-type: inline-size;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'title';
+  src: url('./assets/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+  font-style: normal;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+
+  /* ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #000000;
+  } */
+
+  body {
+    @apply light-theme overflow-x-clip;
+  }
+
+  /* body::before,
+  body::after {
+    content: ' ';
+    @apply pointer-events-none fixed left-0 top-0 z-[99999999] size-full text-[#aeae9d] opacity-20;
+  } */
+
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-fancy !important;
+  }
+
+  a {
+    @apply font-body;
+  }
+
+  ::-moz-selection {
+    /* Code for Firefox */
+    @apply bg-flax-smoke-500 text-flax-smoke-100;
+  }
+
+  ::selection {
+    @apply bg-flax-smoke-500 text-flax-smoke-100;
+  }
+}
+
+@layer components {
+  .font-fancy {
+    font-family: var(--font-fancy) !important;
+  }
+  .light-theme {
+    @apply bg-flax-smoke-50 text-flax-smoke-800;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .common-padding {
+    @apply padding-x padding-y;
+  }
+
+  .padding-x {
+    @apply px-[3%];
+  }
+
+  .padding-y {
+    @apply py-[2%];
+  }
+
+  .spacing-t {
+    @apply pt-5 sm:pt-12 lg:pt-14;
+  }
+
+  .hide-on-mobile {
+    @apply hidden sm:block;
+  }
+
+  .only-on-mobile {
+    @apply flex lg:hidden;
+  }
+
+  .leading-base {
+    line-height: 130%;
+  }
+
+  .column-gap {
+    column-gap: 2.5rem;
+  }
+
+  .row-gap {
+    row-gap: 2.5rem;
+  }
+
+  .text-fluid-body {
+    font-size: clamp(1rem, 0.8571rem + 1.4143vi, 2.5rem);
+  }
+}
+
+@layer utilities {
+  .heading-6 {
+    font-size: var(--heading-6);
+  }
+  .heading-5 {
+    font-size: var(--heading-5);
+  }
+  .heading-4 {
+    font-size: var(--heading-4);
+  }
+  .heading-3 {
+    font-size: var(--heading-3);
+  }
+  .heading-size-3 {
+    width: var(--heading-3);
+    height: var(--heading-3);
+  }
+  .heading-2 {
+    font-size: var(--heading-2);
+  }
+  .heading-size {
+    width: var(--heading-1--alt);
+    height: var(--heading-1--alt);
+  }
+  .heading-1 {
+    font-size: var(--heading-1);
+  }
+  .heading-display {
+    font-size: var(--heading-display);
+  }
+  .heading-body {
+    font-size: var(--heading-body);
+  }
+  .heading-1-alt {
+    font-size: var(--heading-1--alt);
+  }
+
+  .text-base {
+    font-size: var(--text-base);
+  }
+  .text-base-small {
+    font-size: var(--text-base--small);
+  }
+  .text-base-large {
+    font-size: var(--text-base--large);
+  }
+}
