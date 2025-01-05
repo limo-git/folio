@@ -460,8 +460,6 @@
   import { computed, onMounted, ref } from 'vue';
   import { useWindowSize } from '@vueuse/core';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-  // @ts-expect-error: No defs provided
   import { horizontalLoop } from './horizontal-loop.js';
 
   const { width } = useWindowSize();
