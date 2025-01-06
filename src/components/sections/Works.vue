@@ -230,23 +230,16 @@ const handleVideoError = (event: any) => {
 
     return tl;
   };
-const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-  entries.forEach((entry) => {
-    const video = entry.target as HTMLVideoElement;
 
-    if (entry.isIntersecting) {
-      // Set the real src and start the video
-      video.src = video.getAttribute('data-src') || '';
-      video.play().catch((error) => {
-        console.error('Error playing video:', error);
-      });
-    } else {
-      // Optionally, pause the video if it's out of view
-      video.pause();
-    }
-  });
-};
-
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      const video = entry.target as HTMLVideoElement;
+      if (entry.isIntersecting) {
+        video.src = video.getAttribute('data-src') || ''; 
+        video.play();
+      }
+    });
+  };
 
   onBeforeMount(() => {
     selectedWorks.value = textSplitterIntoChar('Selected Works / ', true);
