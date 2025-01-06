@@ -75,7 +75,6 @@
                   :src="work.videoSrc"  <!-- Correct binding of video source -->
                   loop
                   muted
-                  @error="handleVideoError"
                   type="video/mp4"
                   class="work-video size-[80%] rounded-md object-contain"
                 ></video>
@@ -184,9 +183,6 @@
     },
   ];
 
-  const handleVideoError = (event: any) => {
-    console.error('Video failed to load:', event);
-  };
 
   // Reusable function to handle forward scroll animation
   const createForwardTimeline = (
