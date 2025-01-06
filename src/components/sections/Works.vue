@@ -147,7 +147,7 @@
       name: 'captioncraft',
       category: 'frontend& backend & subtitle generation',
       tags: ['ffmpeg', 'whisperX', 'Nvidia CUDA'],
-      videoSrc: 'https://dimpl.vercel.app/work6.mp4', <!-- Updated URL -->
+      videoSrc: 'https://dimpl.vercel.app/work6.mp4', // Updated URL
       imageBg: workBg1,
       url: 'https://github.com/GitHoobar/cc',
       year: '2024',
@@ -157,7 +157,7 @@
       name: 'Docio',
       category: 'Frontend & Backend & Documentation',
       tags: ['Neo4j', 'ContentLayer','Swagger UI'],
-      videoSrc: 'https://dimpl.vercel.app/work5.mp4', <!-- Updated URL -->
+      videoSrc: 'https://dimpl.vercel.app/work5.mp4', // Updated URL
       imageBg: workBg2,
       url: 'https://docio-cli-x1nt-1b61j4cui-limos-projects-27ec13f4.vercel.app/',
       year: '2024',
@@ -167,7 +167,7 @@
       name: 'Portfolio',
       category: 'Frontend & Spline',
       tags: ['Next.js', 'Tailwind', 'Spline'],
-      videoSrc: 'https://dimpl.vercel.app/work7.mp4', <!-- Updated URL -->
+      videoSrc: 'https://dimpl.vercel.app/work7.mp4', // Updated URL
       imageBg: workBg3,
       url: 'https://github.com/limo-git/portfolio',
       year: '2024',
@@ -177,7 +177,7 @@
       name: 'NSUT.AI',
       category: 'Frontend & Backend',
       tags: ['Next.js', 'MongoDB'],
-      videoSrc: 'https://dimpl.vercel.app/work8.mp4', <!-- Updated URL -->
+      videoSrc: 'https://dimpl.vercel.app/work8.mp4', // Updated URL
       imageBg: workBg4,
       url: 'https://nsutai.vercel.app',
       year: '2024',
