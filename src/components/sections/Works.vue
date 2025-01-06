@@ -76,7 +76,7 @@
                   loop
                   muted
                   @error="handleVideoError"
-                  type="video/webm"
+                  type="video/mp4"
                   class="work-video size-[80%] rounded-md object-contain"
                 ></video>
               </div>
