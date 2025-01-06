@@ -114,7 +114,6 @@
 
 <script setup lang="ts">
   import { animateSplitText } from '@/animations';
-  import { work5, work6,work7,work8 } from '@/assets/videos';
   import { textSplitterIntoChar } from '@/functions';
   import { computed, onBeforeMount, onMounted, ref } from 'vue';
   import gsap from 'gsap';
