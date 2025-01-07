@@ -183,8 +183,6 @@
     },
   ];
 const handleVideoError = (event: any) => {
-console.log('Work video source:', work.videoSrc);
-
   console.error('Video failed to load:', event);
   // You can add more details here to inspect the event object further
   console.log('Video URL:', event.target.src);
