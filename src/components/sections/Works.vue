@@ -71,7 +71,7 @@
 
 
                 <video
-                  :src="work.videoSrc"  
+                  :data-src="work.videoSrc"  
                   loop
                   muted
                   @error="handleVideoError"
@@ -183,6 +183,8 @@
     },
   ];
 const handleVideoError = (event: any) => {
+console.log('Work video source:', work.videoSrc);
+
   console.error('Video failed to load:', event);
   // You can add more details here to inspect the event object further
   console.log('Video URL:', event.target.src);
@@ -231,15 +233,21 @@ const handleVideoError = (event: any) => {
     return tl;
   };
 
-  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      const video = entry.target as HTMLVideoElement;
-      if (entry.isIntersecting) {
-        video.src = video.getAttribute('data-src') || ''; 
-        video.play();
+const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach((entry) => {
+    const video = entry.target as HTMLVideoElement;
+    if (entry.isIntersecting) {
+      const src = video.getAttribute('data-src');
+      if (src) {
+        video.src = src;
+        video.play().catch((err) => console.error('Video playback failed:', err));
+      } else {
+        console.error('Missing data-src for video:', video);
       }
-    });
-  };
+    }
+  });
+};
+
 
   onBeforeMount(() => {
     selectedWorks.value = textSplitterIntoChar('Selected Works / ', true);
