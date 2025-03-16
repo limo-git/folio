@@ -116,7 +116,7 @@
   import { textSplitterIntoChar } from '@/functions';
   import { computed, onBeforeMount, onMounted, ref } from 'vue';
   import gsap from 'gsap';
-  import { workBg1, workBg2, workBg3, workBg4 } from '@/assets/images';
+  import { workBg1, workBg2, workBg3, workBg4,workBg5 } from '@/assets/images';
   import { useWindowSize } from '@vueuse/core';
 
   const isSmallScreen = computed(() => {
@@ -163,16 +163,6 @@
     },
     {
       id: 2,
-      name: 'Portfolio',
-      category: 'Frontend & Spline',
-      tags: ['Next.js', 'Tailwind', 'Spline'],
-      videoSrc: 'https://dimpl.vercel.app/work7.mp4', 
-      imageBg: workBg3,
-      url: 'https://github.com/limo-git/portfolio',
-      year: '2024',
-    },
-    {
-      id: 3,
       name: 'NSUT.AI',
       category: 'Frontend & Backend',
       tags: ['Next.js', 'MongoDB'],
@@ -181,6 +171,28 @@
       url: 'https://nsutai.vercel.app',
       year: '2024',
     },
+    {
+      id: 3,
+      name: 'PDFosaurous',
+      category: 'Backend',
+      tags: ['Python', 'low-level PDF syntax'],
+      videoSrc: 'https://dimpl.vercel.app/work9.mp4', 
+      imageBg: workBg5,
+      url: 'https://github.com/limo-git/PDFosaurus/blob/main/dinosaur_game.pdf',
+      year: '2025',
+    },
+    {
+      id: 4,
+      name: 'Portfolio',
+      category: 'Frontend & Spline',
+      tags: ['Next.js', 'Tailwind', 'Spline'],
+      videoSrc: 'https://dimpl.vercel.app/work7.mp4', 
+      imageBg: workBg3,
+      url: 'https://github.com/limo-git/portfolio',
+      year: '2024',
+    },
+    
+   
   ];
 const handleVideoError = (event: any) => {
   console.error('Video failed to load:', event);
